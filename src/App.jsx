@@ -22,7 +22,9 @@ export default function App() {
     setSearched(true);
 
     try {
-      const response = await fetch(`/api/sneakers?search=${encodeURIComponent(value)}`);
+     const response = await fetch(
+  `https://jordan-finder-react-api.onrender.com/api/sneakers?search=${encodeURIComponent(value)}`
+);
 
       if (!response.ok) {
         throw new Error("No fue posible consultar la API.");
